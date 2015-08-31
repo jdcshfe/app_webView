@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PmU-ff-QtH"/>
+                        <viewControllerLayoutGuide type="bottom" id="OYW-wn-wrk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTM-W3-E3s">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-Rq-SRC">
+                                <rect key="frame" x="524" y="20" width="52" height="30"/>
+                                <color key="backgroundColor" red="0.358829707" green="0.68550158419999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="fD1-u8-3Pp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="neZ-Zd-2z3"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6kS-EX-rCO">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6x-bn-qyz">
+                                <rect key="frame" x="17" y="555" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="WL6-y0-Srq"/>
+                                </constraints>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="didBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ql-GI-ZFg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-AC-bU2">
+                                <rect key="frame" x="24" y="20" width="492" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6kS-EX-rCO" firstAttribute="centerX" secondItem="dTM-W3-E3s" secondAttribute="centerX" id="5DH-MF-hf2"/>
+                            <constraint firstItem="t6x-bn-qyz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="CgC-2C-3ei"/>
+                            <constraint firstItem="6kS-EX-rCO" firstAttribute="centerY" secondItem="dTM-W3-E3s" secondAttribute="centerY" id="DSh-9l-EBb"/>
+                            <constraint firstItem="hzX-AC-bU2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="ISy-oE-XRr"/>
+                            <constraint firstItem="dTM-W3-E3s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mdc-5X-P4C"/>
+                            <constraint firstItem="dTM-W3-E3s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YFn-4A-H6L"/>
+                            <constraint firstItem="Seg-Rq-SRC" firstAttribute="leading" secondItem="hzX-AC-bU2" secondAttribute="trailing" constant="8" symbolic="YES" id="b9N-RM-o8g"/>
+                            <constraint firstAttribute="trailing" secondItem="dTM-W3-E3s" secondAttribute="trailing" id="gsX-f2-mqC"/>
+                            <constraint firstItem="OYW-wn-wrk" firstAttribute="top" secondItem="t6x-bn-qyz" secondAttribute="bottom" constant="15" id="hZX-cn-ZOD"/>
+                            <constraint firstItem="Seg-Rq-SRC" firstAttribute="top" secondItem="PmU-ff-QtH" secondAttribute="bottom" id="pjj-bL-9eP"/>
+                            <constraint firstItem="hzX-AC-bU2" firstAttribute="top" secondItem="Seg-Rq-SRC" secondAttribute="top" id="rSm-P3-Wad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Seg-Rq-SRC" secondAttribute="trailing" constant="4" id="sas-Qx-5IU"/>
+                            <constraint firstItem="dTM-W3-E3s" firstAttribute="bottom" secondItem="OYW-wn-wrk" secondAttribute="top" id="uVS-Fo-JiP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="juHua" destination="6kS-EX-rCO" id="Kxe-Nt-yDd"/>
+                        <outlet property="urlInput" destination="hzX-AC-bU2" id="mBb-c6-lBc"/>
+                        <outlet property="webView" destination="dTM-W3-E3s" id="nHH-V6-So9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="289.43661971830971"/>
+        </scene>
+    </scenes>
+</document>
